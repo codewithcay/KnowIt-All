@@ -1,0 +1,53 @@
+body {
+    margin-top: 200px;
+    padding: 0;
+    background-color: #B6AD90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title
+{
+    color: #333D29;
+    font-size: 36px;
+    margin-top: 50px;
+    font-family: 'Courier New', monospace;
+}
+.button {
+    font-family: 'Courier New', monospace;
+    background-color: #582F0E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* use inline-block so buttons size to content and can be centered by a wrapper */
+    display: inline-block;
+    margin: 10px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button:hover {
+    background-color: #936639;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.row {
+    width: 100%;
+    text-align: center;
+}
+.question {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    color: #333D29;
+    padding: 0;
+    margin: 30px 0;
+}

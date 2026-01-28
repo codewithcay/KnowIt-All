@@ -1,0 +1,31 @@
+* {
+    margin-top: 200px;
+    background-color: #B6AD90;
+}
+.title
+{
+    text-align: center;
+    color: #333D29;
+    font-size: 36px;
+    margin-top: 50px;
+    font-family: 'Courier New', monospace;
+}
+.button {
+    font-family: 'Courier New', monospace;
+    background-color: #582F0E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* make the button a block with intrinsic width and auto horizontal margins to center it */
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button:hover {
+    background-color: #936639;
+}

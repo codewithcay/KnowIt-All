@@ -24,6 +24,6 @@
         }
     }
     ?>
-
+     <button class="button" onclick="location.href='quiz.php'">Next Question</button>
 </body>
 </html>

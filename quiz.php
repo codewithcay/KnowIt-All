@@ -12,10 +12,24 @@
     <h1 class="title">Quiz Time!</h1>
 
     <?php
+    session_start();
+    echo "<p class = 'p'>CURRENT SCORE: " . $_SESSION['score'] . "</p>";
         $mysqli = new mysqli("localhost","hr4you","hr4you","hr4you_praktikum");
+        if(isset($_POST['submitCategory'])) 
+          {
+            $sql = "SELECT id FROM questions
+                    WHERE kategorie_id = " . (int)$_POST['submitCategory'];
+            $result = $mysqli->query($sql);
+            $data = $result->fetch_all(MYSQLI_ASSOC);
 
-        $randomInt = rand(1, 10);
-        $sql = "SELECT * FROM questions WHERE id = $randomInt";
+            foreach ($data as $d) {
+                $questions_ids[] = $d['id'];
+            }
+            shuffle($questions_ids);
+          } else {
+            $questions_ids[] = rand(1, 10);
+          }
+        $sql = "SELECT * FROM questions WHERE id = $questions_ids[0]";
         $result = $mysqli->query($sql);
         if ( !$result ) {
             echo "Error: " . $mysqli->error;
@@ -23,7 +37,7 @@
         }
         $rowQ = $result->fetch_assoc();
 
-        $sql = "SELECT * FROM answers WHERE frage_id = $randomInt";
+        $sql = "SELECT * FROM answers WHERE frage_id = $questions_ids[0]";
         $result = $mysqli->query($sql);
         if ( !$result ) {
             echo "Error: " . $mysqli->error;
@@ -45,6 +59,7 @@
       echo '<button type="submit" class="button" name="submit" value="'.$answer['id'].'">'.$answer['antwort'].'</button>';
     }
     ?>
+    <input type="hidden" value="<?= (int)$_POST['submitCategory']; ?>" name="submitCategory"></input>
       </form>
     </div>
 

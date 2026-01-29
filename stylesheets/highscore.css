@@ -1,0 +1,48 @@
+* {
+    margin-bottom: 1%;
+    background-color: #B6AD90;
+}
+.title
+{ 
+    color: #333D29;
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Courier New', monospace;
+}
+.paragraph
+{
+    color: #333D29;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    font-family: 'Courier New', monospace;
+    background-color: #D4C5B0;
+    border-radius: 8px;
+    max-width: 300px;
+}
+.button {
+    font-family: 'Courier New', monospace;
+    background-color: #582F0E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* make the button a block with intrinsic width and auto horizontal margins to center it */
+    display: inline-block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.button:hover {
+    background-color: #936639;
+}
+.container
+{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}

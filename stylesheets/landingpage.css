@@ -1,5 +1,5 @@
 * {
-    margin-top: 200px;
+    margin-top: 50px;
     background-color: #B6AD90;
 }
 .container
@@ -8,7 +8,7 @@
     margin-top: 100px;
 }
 .title
-{
+{ 
     color: #333D29;
     font-size: 36px;
     margin-top: 50px;
@@ -30,7 +30,7 @@
     text-align: center;
     text-decoration: none;
     /* make the button a block with intrinsic width and auto horizontal margins to center it */
-    display: block;
+    display: inline-block;
     width: fit-content;
     margin: 10px auto;
     font-size: 16px;
@@ -39,4 +39,26 @@
 }
 .button:hover {
     background-color: #936639;
+}
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.buttons-wrapper form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.buttons-wrapper .button {
+    margin: 10px;
+}
+.row {
+    width: 100%;
+    text-align: center;
 }

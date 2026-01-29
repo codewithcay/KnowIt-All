@@ -56,7 +56,7 @@
     <?php
     shuffle($rowsA);
     foreach ($rowsA as $answer){
-      echo '<button type="submit" class="button" name="submit" value="'.$answer['id'].'">'.$answer['antwort'].'</button>';
+      echo '<button type="submit" class="button" name="submit" value="'.$answer['id'].'">'.htmlspecialchars($answer['antwort'], ENT_QUOTES, 'UTF-8').'</button>';
     }
     ?>
     <input type="hidden" value="<?= (int)$_POST['submitCategory']; ?>" name="submitCategory"></input>

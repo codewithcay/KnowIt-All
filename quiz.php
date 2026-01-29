@@ -15,7 +15,7 @@
     session_start();
     echo "<p class = 'p'>CURRENT SCORE: " . $_SESSION['score'] . "</p>";
         $mysqli = new mysqli("localhost","hr4you","hr4you","hr4you_praktikum");
-        if(isset($_POST['submitCategory'])) 
+        if(isset($_POST['submitCategory']) && !empty($_POST['submitCategory']) && 0 < (int) $_POST['submitCategory'])
           {
             $sql = "SELECT id FROM questions
                     WHERE kategorie_id = " . (int)$_POST['submitCategory'];
@@ -27,7 +27,7 @@
             }
             shuffle($questions_ids);
           } else {
-            $questions_ids[] = rand(1, 10);
+            $questions_ids[] = rand(1, 45);
           }
         $sql = "SELECT * FROM questions WHERE id = $questions_ids[0]";
         $result = $mysqli->query($sql);
